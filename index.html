@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		
+		
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/mdb.css">
+		<link rel="stylesheet" href="css/style.css">
+		</HEAD>
+<body id="indexfile">
+	<?php
+	include "mainclass.php";
+	if(isset($_POST['submit'])){
+		
+		$main->login();
+		}
+	
+	?>
+<form id="login" method="POST" action="">
+	<?php
+	if(isset($_GET['error']))
+	{
+		echo "<h2 style='color:red'>Invalid Password</h2>";
+	}
+	
+	?>
+	<p id="logdet">Enter Login Details</p></br></br></br>
+Enter UserName:  <input type="text" name="username" id="username"></input></br></br>
+Enter Password: 	<input type="password" name="password" id="password"></input></br></br></br>
+<input type="Submit" value="Login" name="submit" id="submit"></input>
+</form></br></br>
+<p id="signup">
+Not a member? <a id="sign" href="register.php">  Register Here</a>
+
+</p></body>
+<html>
